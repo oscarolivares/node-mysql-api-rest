@@ -1,3 +1,5 @@
 body-parser: para poder entender de una manera mas sencilla los datos a travez de post
 
 morgan: para mostrar por consola las peticiones que llegan al servidor
+
+nodemon: watcher para reiniciar el servidor cuando cambian los archivos

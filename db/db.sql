@@ -1,0 +1,17 @@
+
+CREATE DATABASE `mysqlapi_test` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+USE `mysqlapi_test`;
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(50) NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `update_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY `pk_id`(`id`),
+  UNIQUE KEY `users_email_unique`(`email`)
+) ENGINE = InnoDB;
+
+DESCRIBE `users`;
