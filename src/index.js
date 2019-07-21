@@ -11,6 +11,9 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
+// Routers
+require('./routes/userRoutes')(app);
+
 app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));
 });
